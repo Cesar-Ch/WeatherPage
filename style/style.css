@@ -10,6 +10,7 @@ body {
     /* background: linear-gradient(to right top, #2980b9, #6dd5fa, #8bd3f4); */
     /* background: linear-gradient(to right top, #000428, #004e92); */
     /* background: linear-gradient(to right top, #283048, #859398); */
+    font-family: Arial, Helvetica, sans-serif;
     background-size: cover;
     background-repeat: no-repeat;
     color: whitesmoke;
@@ -19,20 +20,20 @@ body {
     align-items: center;
 }
 
-.container{
+.container {
     display: grid;
     margin: 0 auto;
     gap: 30px;
     grid-template-columns: 530px 300px;
-    grid-template-rows: 150px 100px 150px;
-    grid-template-areas: " lugar temp"
-    ". temp"
-    " info temp";
-    
+    grid-template-rows: 135px 100px 150px;
+    grid-template-areas: 
+        " lugar temp"
+        ". temp"
+        " info temp";
+
 }
 
-#caja1{
-    
+#caja1 {
     border: 2px solid white;
     width: 100%;
     margin: 0 auto;
@@ -41,27 +42,39 @@ body {
     grid-area: lugar;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, .37);
     backdrop-filter: blur(10px);
-    background: linear-gradient(135deg, rgba(255,255,255,.1),rgba(255,255,255,0));
+    background: linear-gradient(135deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, 0));
 }
-#caja2{
+
+#name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#name i{
+    font-size: 20px;
+}
+
+#caja2 {
     border: 2px solid white;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, .37);
     backdrop-filter: blur(10px);
-    background: linear-gradient(135deg, rgba(255,255,255,.1),rgba(255,255,255,0));
+    background: linear-gradient(135deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, 0));
     border-radius: 10px;
-    
     padding: 20px;
     text-align: center;
     grid-area: temp;
 }
-#caja3{
+
+
+#caja3 {
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, .37);
     backdrop-filter: blur(10px);
-    background: linear-gradient(135deg, rgba(255,255,255,.1),rgba(255,255,255,0));
+    background: linear-gradient(135deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, 0));
     border: 2px solid white;
-    
+
     border-radius: 10px;
-    
+
     padding: 20px;
     grid-area: info;
     display: flex;
@@ -70,35 +83,40 @@ body {
     text-align: center;
     height: 100%;
 }
-.cont-img{
+
+.cont-img {
     width: 100%;
     margin: 0 auto;
 }
-img{
+
+img {
     width: 100%;
 }
 
 
-#temperatura-valor{
-    font-size: 45px;
+#temperatura-valor {
+    font-size: 50px;
+    font-weight: bold;
 }
 
-#caja3 > div{
+#caja3>div {
     padding: 10px;
 }
-form{
+
+form {
     position: relative;
 }
-input{
+
+input {
     border-radius: 10px;
     border: none;
-    padding:7px 32px;
+    padding: 7px 32px;
     margin-top: 10px;
     width: 50%;
     outline: none;
 }
 
-form i{
+form i {
     position: absolute;
     left: 10px;
     top: 17px;
@@ -107,25 +125,29 @@ form i{
 
 
 @media screen and (max-width: 1000px) {
-    .container{
+    .container {
         grid-template-columns: 400px 250px;
         grid-template-rows: 150px 50px 100px;
         grid-template-areas: "lugar temp"
-                            ". temp"
-                            " info temp";
+            ". temp"
+            " info temp";
     }
-    #caja1{
+
+    #caja1 {
         grid-area: lugar;
     }
-    #caja2{
+
+    #caja2 {
         grid-area: temp;
     }
-    #caja3{
+
+    #caja3 {
         grid-area: info;
     }
 }
-@media screen and (max-width:700px){
-    .container{
+
+@media screen and (max-width:700px) {
+    .container {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
@@ -134,23 +156,23 @@ form i{
         padding: 10px;
         padding-top: 100px;
     }
-    #caja1{
+
+    #caja1 {
         width: 400px;
         margin: 0 auto;
         max-width: 100%;
     }
-    #caja2{
+
+    #caja2 {
         width: 350px;
         margin: 0 auto;
         max-width: 100%;
     }
-    #caja3{
+
+    #caja3 {
         width: 500px;
         margin: 0 auto;
         max-width: 100%;
         font-size: 12px;
     }
 }
-
-
-
